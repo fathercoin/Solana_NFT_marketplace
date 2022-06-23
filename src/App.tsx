@@ -32,7 +32,7 @@ import SingleOrder from './views/SingleOrder'
 
 require('@solana/wallet-adapter-react-ui/styles.css')
 
-const candyMachineId = new anchor.web3.PublicKey(process.env.REACT_APP_CANDY_MACHINE_ID!)
+
 const network = process.env.REACT_APP_SOLANA_NETWORK as WalletAdapterNetwork
 const rpcHost = process.env.REACT_APP_SOLANA_RPC_HOST!
 const connection = new anchor.web3.Connection(rpcHost)
@@ -74,9 +74,9 @@ const currencyOptions = [
     volumeDecimals: 1
   },
   {
-    currencySymbol: '56p',
-    treasuryMint: '56pdaHboK66cxRLkzkYVvFSAjfoNEETJUsrdmAYaTXMJ',
-    currencyDecimals: 9,
+    currencySymbol: 'BONE',
+    treasuryMint: 'D3eyBjfgJMPHZyYDRtbf1cSxeLiNwKumwHzQK3h3TRRq',
+    currencyDecimals: 6,
     priceDecimals: 2,
     volumeDecimals: 1
   }

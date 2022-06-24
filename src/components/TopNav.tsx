@@ -62,10 +62,7 @@ const TopNav: React.FC<TopNavProps> = ({
           <Link to='/'>Home</Link>
         </li>
         <li>
-          <Link to='/marketplace'>Marketplace</Link>
-        </li>
-        <li>
-          <Link to='/sell'>Sell</Link>
+          <Link to='/multi-currency-sell'>Sell</Link>
         </li>
         <DropdownAnchor ref={anchorRef} onClick={handleToggle}>
           Other Layouts

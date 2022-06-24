@@ -20,10 +20,8 @@ import styled from 'styled-components'
 
 import TopNav from './components/TopNav'
 import { CurrencyProvider } from './components/Currency'
-import Home from './views/Home'
-import Marketplace from './views/Marketplace'
+import Home from './views/MarketplaceWithFilter'
 import CustomTokenMarketplace from './views/CustomTokenMarketplace'
-import MarketplaceWithFilter from './views/MarketplaceWithFilter'
 import MarketplaceWithUrl from './views/MarketplaceWithUrl'
 import MultiCurrencyMarketplace from './views/MultiCurrencyMarketplace'
 import MultiCurrencySell from './views/MultiCurrencySell'
@@ -115,33 +113,11 @@ const App = () => {
                       element={(
                         <>
                           <TopNav />
-                          <Home
-                            candyMachineId={candyMachineId}
-                            connection={connection}
-                            txTimeout={txTimeout}
-                            rpcHost={rpcHost}
-                          />
+                          <Home/>
                         </>
                       )}
                     />
-                    <Route
-                      path='/marketplace/:tokenMint'
-                      element={(
-                        <>
-                          <TopNav />
-                          <SingleOrder />
-                        </>
-                      )}
-                    />
-                    <Route
-                      path='/marketplace'
-                      element={(
-                        <>
-                          <TopNav />
-                          <Marketplace />
-                        </>
-                      )}
-                    />
+                 
                     <Route
                       path='/sell'
                       element={
@@ -160,15 +136,7 @@ const App = () => {
                         </>
                       }
                     />
-                    <Route
-                      path='/multi-collection-marketplace'
-                      element={
-                        <>
-                          <TopNav />
-                          <MarketplaceWithFilter />
-                        </>
-                      }
-                    />
+                    
                     <Route
                       path='/marketplace-with-url'
                       element={
